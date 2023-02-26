@@ -1,0 +1,128 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body, html{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns:.4fr 1.6fr;
+    grid-template-rows: .2fr 1.8fr;
+    grid-template-areas: 
+                    "dash head"
+                    "dash main";
+}
+
+
+
+header{
+    grid-area: head;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+
+
+.dashboard{
+    outline: 3px solid blue;
+    grid-area: dash;
+    display: grid;
+    grid-template-rows: .2fr .6fr 1.2fr;
+    align-items: start;
+}
+
+
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+                    "proj anounce"
+                    "proj trend";
+}
+
+.projects{
+    outline: 3px solid green;
+    width: 100%;
+    grid-area: proj;
+}
+.annoucements{
+    grid-area: announce;
+}
+.trending{
+    grid-area: trend;
+}
+
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+
+.card{
+    outline: 3px solid yellow;
+    max-width: 20rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: .2fr .5fr .3fr;
+}
+
+.card ul{
+    justify-self: end;
+    display: flex;
+}
+
+
+img{
+    height: 20px;
+    width: 20px;
+}
