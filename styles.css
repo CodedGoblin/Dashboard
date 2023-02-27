@@ -51,6 +51,7 @@ table {
 body, html{
     height: 100vh;
     width: 100vw;
+    box-sizing: border-box;
     display: grid;
     grid-template-columns:.4fr 1.6fr;
     grid-template-rows: .2fr 1.8fr;
@@ -67,8 +68,52 @@ header{
     grid-template-rows: 1fr 1fr;
 }
 
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 
+form{
+    outline: 2px solid red;
+    flex: 0 1 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+input{
+    width: 90%;
+}
+
+.search-bar div{
+    flex: 0 0 30%;
+    outline: 2px solid palevioletred;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-info{
+    outline: 2px solid palevioletred;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.nav-menu{
+    width: 100%;
+    outline: 2px solid palevioletred;
+    justify-self: end;
+    display: flex;
+    justify-content: space-evenly;
+}
 
 .dashboard{
     outline: 3px solid blue;
@@ -121,6 +166,22 @@ main{
     display: flex;
 }
 
+
+.annoucements-container{
+    display: grid;
+}
+
+.trending-container{
+    display: grid;
+}
+
+.trending-container div{
+    display: flex;
+}
+
+.trending-container span{
+    display: block;
+}
 
 img{
     height: 20px;
