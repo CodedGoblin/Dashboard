@@ -1,0 +1,204 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body, html{
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns:minmax(16rem, .3fr) minmax(70rem,1.7fr);
+    grid-template-rows: minmax(8rem, .2fr) 1.8fr;
+    grid-template-areas: 
+                    "dash head"
+                    "dash main";
+}
+
+
+
+header{
+    padding: 1rem;
+    grid-area: head;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+form{
+    flex: 0 1 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+input{
+    width: 90%;
+}
+
+.search-bar div{
+    flex: 0 0 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-info{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.nav-menu{
+    width: 100%;
+    justify-self: end;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dashboard{
+    grid-area: dash;
+    display: grid;
+    grid-template-rows: .2fr .6fr 1.2fr;
+    align-items: start;
+}
+
+
+
+main{
+    overflow: hidden;
+    max-height: 100%;
+    padding: 1rem;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1.4fr minmax(20rem,0.6fr);
+    grid-template-rows: minmax(15rem, 50%) minmax(15rem, 50%);
+    grid-template-areas: 
+                    "proj anounce"
+                    "proj trend";
+    justify-content: space-around;
+}
+
+.projects{
+    overflow: scroll;
+    outline: 2px solid pink;
+    grid-area: proj;
+}
+.announcements{
+    padding: 1rem;
+    outline: 2px solid pink;
+    grid-area: anounce;
+}
+.trending{
+    padding: 1rem;
+    outline: 2px solid pink;
+    grid-area: trend;
+}
+
+
+.cards-container{
+    box-sizing: border-box;
+    height: 100%;
+    outline: 2px solid pink;
+    padding: 1rem;
+    max-height: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+}
+
+.card{
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: .2fr .5fr .3fr;
+}
+
+.card ul{
+    justify-self: end;
+    display: flex;
+}
+
+
+.announcements-container{
+    box-sizing: border-box;
+    height: 100%;
+    padding: 2rem;
+    display: grid;
+}
+
+.trending-container{
+    box-sizing: border-box;
+    height: 100%;
+    padding: 2rem;
+    display: grid;
+}
+
+.trending-container div{
+    display: flex;
+}
+
+.trending-container span{
+    display: block;
+}
+
+img{
+    height: 20px;
+    width: 20px;
+}
