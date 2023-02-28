@@ -1,83 +1,82 @@
 
-
-
-body, html{
-  
+:root{
+    font-family: sans-serif;
 }
 
 
 
 header{
+    box-sizing: border-box;
+    border-bottom: 1px solid gray;
+    box-shadow: 0 3px 6px gray;
+    font-weight: bold;
     background-color: white;
-
+    z-index: 1;
 }
+
+.search-bar p{
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+
+.nav-menu p{
+    font-size: clamp(0.8rem, 1.1vw, 1rem);
+}
+
+.nav-info h1{
+    font-weight: bolder;
+    font-size: clamp(1.5rem, 1.2vw, 3.2rem);
+}
+
 
 .search-bar button{
     background-color: inherit;
     border: none;
-
 }
 
 
-form{
-
-
-}
 
 input{
+    font-weight: 600;
+    font-size: 1rem;
     background-color: rgb(226, 226, 226);
     border: none;
     border-radius: 20px;
-}
-
-.search-bar div{
-
-
-}
-
-nav{
-
-}
-
-.nav-info{
-
-
-}
-
-
-.nav-menu{
-
-
+    padding-left: 1rem;
 }
 
 
 .nav-menu button{
-    background-color: #FFA3FD;
+    font-weight: bold;
+    font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+    color: rgb(255, 255, 255);
+    background-color: #ff80fd;
     border-radius: 20px;
     border: none;
-    width: 8rem;
-    height: 2rem;
+    width: 9rem;
+    height: 2.3rem;
 }
 
 .dashboard{
+    color: white;
+    font-weight: bold;
     background-color: #865DFF;
-
+    font-size: clamp(1.1rem, 1.1vw, 1.3rem);
 }
 
+.dashboard h1{
+    font-weight: bolder;
+    font-size: clamp(1.6rem, 1.1vw, 2rem);
+}
 
+a{
+    text-decoration: none;
+    color: white;
+}
 
 main{
     background-color: rgb(226, 226, 226);
 }
 
-.projects{
-
-}
-
-
-.cards-container{
-
-}
 
 .card{
     background-color: white;
@@ -85,30 +84,86 @@ main{
     border-radius: 10px;
 }
 
+.card p{
+    font-size: clamp(1rem, 1.1vw, 1.2rem);
+    color: rgb(95, 95, 95);
+}
+
+.card h3{
+    font-size: clamp(1.1rem, 1.1vw, 1.3rem);
+}
+
 .card button{
     border: none;
     background: inherit;
 }
 
+.card img{
+    height: 1.5rem;
+}
 
-.announcements-container{
+
+.announcements-container, .trending-container{
     border-radius: 10px;
     background-color: white;
 }
 
-.trending-container{
-    border-radius: 10px;
-    background-color: white;
+
+.announcements p, .trending p{
+    font-size: clamp(0.8rem, 90%, 1rem);
+    color: rgb(95, 95, 95);
 }
 
-.trending-container div{
-
+.announcements p{
+    padding-bottom: 1rem;
 }
 
-.trending-container span{
 
+
+.announcements-container div{
+    border-bottom: 1px solid rgb(167, 167, 167);
+}
+
+.announcements-container div:last-child{
+    border: none;
+}
+
+.trending p{
+    font-size: clamp(0.8rem, 1.1vw, 1rem);
+    color: black;
+}
+
+span{
+    color: rgb(95, 95, 95);
+}
+
+.announcements h4, .trending h4{
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+}
+
+
+section h2{
+    font-weight: bold;
+    font-size: clamp(1.1rem, 1.1vw, 1.4rem);
 }
 
 img{
     border-radius: 50%;
+}
+
+
+.card:hover{
+    translate: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.card button:hover{
+    translate: 0 -3px;
+}
+
+.nav-menu button:hover{
+    box-shadow: 0 3px 3px #b49bff;
 }

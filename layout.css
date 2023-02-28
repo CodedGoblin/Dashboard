@@ -48,26 +48,26 @@ table {
 }
 
 
+
+
 body, html{
     height: 100vh;
     width: 100vw;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns:minmax(16rem, .3fr) minmax(70rem,1.7fr);
-    grid-template-rows: minmax(8rem, .2fr) 1.8fr;
+    grid-template-columns:minmax(15rem, .3fr) minmax(70rem,1.7fr);
+    grid-template-rows: .3fr 1.7fr;
     grid-template-areas: 
                     "dash head"
                     "dash main";
 }
 
 
-
 header{
-    padding: 1rem;
+    padding: 1rem 3rem;
     grid-area: head;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 2rem;
 }
 
 .search-bar{
@@ -80,7 +80,7 @@ header{
 form{
     flex: 0 1 70%;
     display: flex;
-    justify-content: space-around;
+    gap: 0.6rem;
 }
 
 input{
@@ -88,10 +88,23 @@ input{
 }
 
 .search-bar div{
-    flex: 0 0 30%;
+    flex: 1 1 30%;
     display: flex;
-    justify-content: space-around;
+    justify-content: end;
+    align-items: center;
+    gap: 3rem;
 }
+
+header img{
+    height: 1.8rem;
+}
+
+img[alt="profile-image"]{
+    height: 3rem;
+}
+
+
+
 
 nav{
     display: grid;
@@ -102,53 +115,88 @@ nav{
 
 .nav-info{
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
 }
 
+.nav-info img {
+    height: 4rem;
+}
 
 .nav-menu{
     width: 100%;
     justify-self: end;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: end;
+    gap: 3rem;
 }
 
+
+
 .dashboard{
+    box-sizing: border-box;
+    padding: 1rem 0 0 2rem;
     grid-area: dash;
     display: grid;
     grid-template-rows: .2fr .6fr 1.2fr;
     align-items: start;
+    gap: 3rem
+}
+
+.dashboard li{
+    padding: 0.8rem 0;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-items: center;
+    gap: .6rem;
+}
+
+.dashboard h1{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: .6rem;
+}
+
+.dashboard h1>img{
+    height: 3rem;
+}
+
+.dashboard img{
+    flex: 0 0 20%;
+    height: 2rem;
 }
 
 
-
 main{
+    box-sizing: border-box;
     overflow: hidden;
     max-height: 100%;
     padding: 1rem;
     grid-area: main;
     display: grid;
-    grid-template-columns: 1.4fr minmax(20rem,0.6fr);
+    grid-template-columns: 1.5fr minmax(20rem,0.5fr);
     grid-template-rows: minmax(15rem, 50%) minmax(15rem, 50%);
     grid-template-areas: 
                     "proj anounce"
                     "proj trend";
     justify-content: space-around;
+    row-gap: 3rem;
 }
 
 .projects{
     overflow: scroll;
-    outline: 2px solid pink;
     grid-area: proj;
 }
+
 .announcements{
-    padding: 1rem;
-    outline: 2px solid pink;
+    padding-right: 1rem;
     grid-area: anounce;
 }
+
 .trending{
-    padding: 1rem;
-    outline: 2px solid pink;
+    padding-right: 1rem;
     grid-area: trend;
 }
 
@@ -156,7 +204,6 @@ main{
 .cards-container{
     box-sizing: border-box;
     height: 100%;
-    outline: 2px solid pink;
     padding: 1rem;
     max-height: 100%;
     display: grid;
@@ -175,30 +222,42 @@ main{
     display: flex;
 }
 
-
+.card img{
+    height: 1.5rem;
+}
 .announcements-container{
+    padding: 1rem;
     box-sizing: border-box;
-    height: 100%;
-    padding: 2rem;
+    max-height: 100%;
     display: grid;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.announcements-container div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .trending-container{
+    padding: 1rem;
     box-sizing: border-box;
-    height: 100%;
-    padding: 2rem;
+    max-height: 100%;
     display: grid;
+    gap: 2rem;
 }
 
 .trending-container div{
     display: flex;
+    align-items: center;
 }
 
 .trending-container span{
     display: block;
 }
 
-img{
-    height: 20px;
-    width: 20px;
+.announcements h2, .trending h2{
+    margin-bottom: 1rem;
 }
+
